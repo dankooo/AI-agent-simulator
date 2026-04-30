@@ -1,0 +1,36 @@
+{
+  "missions": [
+    {
+      "id": "m_weather",
+      "title": "Morning Forecast",
+      "request": "Нужно ли брать зонт сегодня вечером?",
+      "startEnergy": 50,
+      "requiredStickers": ["search_weather", "analyze_summary"],
+      "optimalActions": ["search_weather", "analyze_summary"],
+      "availableActions": ["search_weather", "memory", "clarify", "calculate", "analyze_summary"],
+      "stickers": [
+        {"id": "search_weather", "text": "Погода: дождь после 18:00"},
+        {"id": "analyze_summary", "text": "Вывод: лучше взять зонт"},
+        {"id": "memory", "text": "Вчера было сухо"}
+      ],
+      "answerOptions": ["Да, взять зонт", "Нет, не брать", "Нужен шарф"],
+      "correctAnswerIndex": 0
+    },
+    {
+      "id": "m_bus",
+      "title": "Bus Timing",
+      "request": "Успею ли я на автобус в 08:30, если выйду через 10 минут?",
+      "startEnergy": 45,
+      "requiredStickers": ["search_schedule", "calculate_eta"],
+      "optimalActions": ["search_schedule", "calculate_eta"],
+      "availableActions": ["search_schedule", "calculate_eta", "clarify", "memory", "analyze_summary"],
+      "stickers": [
+        {"id": "search_schedule", "text": "Автобус: 08:30, 08:42"},
+        {"id": "calculate_eta", "text": "ETA до остановки: 9 минут"},
+        {"id": "clarify", "text": "Пользователь: идти быстрым шагом"}
+      ],
+      "answerOptions": ["Да, успеете", "Нет, не успеете", "Нужен такси"],
+      "correctAnswerIndex": 0
+    }
+  ]
+}
