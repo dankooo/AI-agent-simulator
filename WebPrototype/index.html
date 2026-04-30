@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Token Agent — Браузерный прототип</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1 id="app-title">Token Agent — Браузерный прототип</h1>
+      <div class="top-controls">
+        <label for="lang-select" id="lang-label">Язык:</label>
+        <select id="lang-select">
+          <option value="ru" selected>Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <div id="energy">Энергия: 0 / 0</div>
+    </header>
+
+    <section class="card">
+      <h2 id="mission-title">Миссия</h2>
+      <p id="mission-request">...</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3 id="stations-title">Станции</h3>
+        <div id="actions" class="actions"></div>
+        <button id="assemble-btn" class="primary">Собрать ответ (-10)</button>
+      </div>
+
+      <div class="card">
+        <h3 id="stickers-title">Доска стикеров</h3>
+        <ul id="stickers"></ul>
+      </div>
+    </section>
+
+    <section id="answer-panel" class="card hidden">
+      <h3 id="answers-title">Выберите ответ</h3>
+      <div id="answers"></div>
+      <button id="not-enough">Недостаточно данных</button>
+    </section>
+
+    <section id="result-panel" class="card hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
